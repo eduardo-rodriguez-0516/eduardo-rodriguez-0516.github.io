@@ -116,7 +116,7 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
     <section class="section" id="Engineering Experience">
       <div class="section-head"><div><div class="kicker">Selected work</div><h2>Engineering Experience</h2></div><p class="section-note">Engineering experience across formal settings and student teams.</p></div>
       <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all">All experiences</button><button class="filter" data-filter="pcb">PCB design</button><button class="filter" data-filter="rf">RF & microwave</button><button class="filter" data-filter="digital">Digital design</button>
+        <button class="filter active" data-filter="all">All experiences</button><button class="filter" data-filter="pcb">PCB design</button><button class="filter" data-filter="rf">RF & microwave</button><button class="filter" data-filter="digital">RTL design</button>
       </div>
       <div class="projects" id="projectGrid">
         <article class="project" data-category="pcb">
@@ -138,7 +138,7 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
     <section class="section" id="projects">
       <div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects</h2></div><p class="section-note">A growing collection of board designs, lab experiments, and digital hardware work. Use the filters to explore by focus area.</p></div>
       <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="pcb">PCB design</button><button class="filter" data-filter="rf">RF & microwave</button><button class="filter" data-filter="digital">Digital design</button>
+        <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="pcb">PCB design</button><button class="filter" data-filter="rf">RF & microwave</button><button class="filter" data-filter="digital">RTL design</button>
       </div>
       <div class="projects" id="projectGrid">
         <article class="project" data-category="rf">
@@ -163,11 +163,11 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
         </article>
         <article class="project" data-category="digital">
           <div class="project-art"><div class="art-grid"></div><div class="art-icon">PCB</div></div>
-          <div class="project-body"><div class="project-meta"><span>TinyRV2 Pipelined Processor</span><span>01</span></div><h3>Digital design</h3><p>RISC-V single cycle processor for TinyRV1 ISA.</p><div class="tags"><span class="tag">Altium</span><span class="tag">Power</span><span class="tag">40 A</span></div><div class="project-bottom"><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">View repository ↗</a><button class="detail-btn" data-detail="power">Details +</button></div></div>
+          <div class="project-body"><div class="project-meta"><span>TinyRV2 Pipelined Processor</span><span>01</span></div><h3>RTL design</h3><p>RISC-V single cycle processor for TinyRV1 ISA.</p><div class="tags"><span class="tag">Altium</span><span class="tag">Power</span><span class="tag">40 A</span></div><div class="project-bottom"><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">View repository ↗</a><button class="detail-btn" data-detail="power">Details +</button></div></div>
         </article>
         <article class="project" data-category="digital">
           <div class="project-art"><div class="art-grid"></div><div class="art-icon">PCB</div></div>
-          <div class="project-body"><div class="project-meta"><span>TinyRV1 Single Cycle Processor</span><span>01</span></div><h3>Digital design</h3><p>RISC-V pipelined processor for a subset of the TinyRV2 ISA.</p><div class="tags"><span class="tag">Altium</span><span class="tag">Power</span><span class="tag">40 A</span></div><div class="project-bottom"><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">View repository ↗</a><button class="detail-btn" data-detail="power">Details +</button></div></div>
+          <div class="project-body"><div class="project-meta"><span>TinyRV1 Single Cycle Processor</span><span>01</span></div><h3>RTL design</h3><p>RISC-V pipelined processor for a subset of the TinyRV2 ISA.</p><div class="tags"><span class="tag">Altium</span><span class="tag">Power</span><span class="tag">40 A</span></div><div class="project-bottom"><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">View repository ↗</a><button class="detail-btn" data-detail="power">Details +</button></div></div>
         </article>
       </div>
       <div class="empty" id="emptyState">No projects in this category yet.</div>
@@ -184,7 +184,7 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
 const details = {
  power: { kicker:'PCB design · Repository available', title:'Power Distribution Board', body:'<p>A board-level project for distributing power across a mobile robotics platform. The public repository is the source of truth for the design files and project-specific documentation.</p><ul><li>Document the input and output power architecture.</li><li>Explain protection choices and current-path/layout trade-offs.</li><li>Add board screenshots, calculations, and validation evidence as they are ready.</li></ul><p><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">Open the GitHub repository ↗</a></p>' },
  rf: { kicker:'RF & microwave · Lab work', title:'Transmission-Line Characterization', body:'<p>A lab project focused on understanding real transmission-line behavior with measurement equipment.</p><ul><li>Describe the calibration method and reference plane.</li><li>Plot measured S11 and S21 across frequency.</li><li>Compare insertion loss and phase with theoretical expectations, noting uncertainty and setup limitations.</li></ul><p><strong>Next step:</strong> add your own plots and measurement conditions before linking a public repository.</p>' },
- digital: { kicker:'Digital design · Coursework', title:'Processor RTL & Verification', body:'<p>A digital-design workstream involving processor components, assembly-level tests, and automated simulation.</p><ul><li>Explain the module under test and its expected behavior.</li><li>Summarize directed and dependency test cases.</li><li>Include only course materials and code you are permitted to publish.</li></ul><p><strong>Next step:</strong> add a repository link when the project is ready to share publicly.</p>' }
+ digital: { kicker:'RTL design · Coursework', title:'Processor RTL & Verification', body:'<p>A digital-design workstream involving processor components, assembly-level tests, and automated simulation.</p><ul><li>Explain the module under test and its expected behavior.</li><li>Summarize directed and dependency test cases.</li><li>Include only course materials and code you are permitted to publish.</li></ul><p><strong>Next step:</strong> add a repository link when the project is ready to share publicly.</p>' }
 };
 document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
  document.querySelectorAll('.filter').forEach(b => b.classList.toggle('active', b === button));
