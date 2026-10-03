@@ -90,6 +90,14 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
 .modal ul { padding-left:20px; }
 @media (max-width:800px) { .hero { grid-template-columns:1fr; gap:28px; padding-top:55px; } .hero-visual { min-height:285px; } .projects { grid-template-columns:repeat(2,minmax(0,1fr)); } .section-head { align-items:start; flex-direction:column; } }
 @media (max-width:560px) { .wrap { width:calc(100% - 28px); } .navlinks { gap:12px; } .navlinks a:nth-child(2) { display:none; } .hero { padding:43px 0; } .projects, .two-col { grid-template-columns:1fr; } .project { min-height:290px; } .contact { align-items:start; flex-direction:column; } footer { flex-direction:column; } }
+.project-art {height: 220px; overflow: hidden;}
+
+.project-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 </style>
 </head>
 <body>
@@ -175,6 +183,19 @@ footer { border-top:1px solid var(--line); margin-top:50px; padding:22px 0; colo
           <div class="project-art"><img src="images/tinyrv1.png" alt="TinyRV1 Single Cycle Processor"></div>
           <div class="project-body"><div class="project-meta"><span>TinyRV1 Single Cycle Processor</span><span>01</span></div><h3>RTL design</h3><p>RISC-V pipelined processor for a subset of the TinyRV2 ISA.</p><div class="tags"><span class="tag">SystemVerilog</span><span class="tag">Pytest</span><span class="tag">RTL</span></div><div class="project-bottom"><a class="textlink" href="https://github.com/eduardo-rodriguez-0516/power_distribution_board" target="_blank" rel="noreferrer">View repository ↗</a><button class="detail-btn" data-detail="power">Details +</button></div></div>
         </article>
+
+
+        .project-art {
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
       </div>
       <div class="empty" id="emptyState">No projects in this category yet.</div>
     </section>
