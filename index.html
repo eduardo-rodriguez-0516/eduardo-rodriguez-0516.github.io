@@ -284,13 +284,7 @@ const backdrop = document.getElementById('modalBackdrop');
 document.querySelectorAll('[data-detail]').forEach(button => button.addEventListener('click', () => {
  const item = details[button.dataset.detail]; document.getElementById('modalKicker').textContent = item.kicker; document.getElementById('modalTitle').textContent = item.title; document.getElementById('modalContent').innerHTML = item.body; backdrop.classList.add('open'); document.getElementById('closeModal').focus();
 }));
-function closeModal(){backdrop.classList.remove('open');}
-document.getElementById('closeModal').addEventListener('click', closeModal);
-backdrop.addEventListener('click', e => {if(e.target === backdrop) closeModal();});
-document.addEventListener('keydown', e => {if(e.key === 'Escape') closeModal();});
-document.getElementById('themeToggle').addEventListener('click', () => {
- const root = document.documentElement; const current = root.dataset.theme || 'auto'; const next = current === 'dark' ? 'light' : 'dark'; root.dataset.theme = next; root.style.colorScheme = next;
-});
+
 document.getElementById('copyProfile').addEventListener('click', async () => {
  const button = document.getElementById('copyProfile');
  try { await navigator.clipboard.writeText('https://github.com/eduardo-rodriguez-0516'); button.textContent = 'Copied! ✓'; }
